@@ -9,6 +9,7 @@ const Header = () => {
     <HeaderElem>
       <TitleIntro>Let's Learn About</TitleIntro>
       <Title>Waveforms</Title>
+      <Byline><a href='https://twitter.com/JoshWComeau' target='_blank'>By Josh Comeau</a></Byline>
     </HeaderElem>
   );
 };
@@ -25,6 +26,7 @@ const HeaderElem = styled.header`
     margin-top: 222px;
   }
 `;
+
 
 const TitleIntro = styled.h3`
   font-weight: 200;
@@ -83,6 +85,10 @@ const Title = styled.h1`
     */
     font-size: 92px;
   }
+`;
+
+const Byline = styled.p`
+  margin-top: 1rem;
 `;
 
 export default Header;

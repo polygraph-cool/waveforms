@@ -4,22 +4,15 @@ import styled from 'styled-components';
 
 import { COLORS } from '../../constants';
 
-import HitCounter from '../HitCounter';
+// import HitCounter from '../HitCounter';
 
 const Footer = () => {
   return (
     <Wrapper>
-      <Copyright>
-        <strong>© Josh Comeau, 2018 and beyond.</strong>
-      </Copyright>
       <License>
-        Feel free to do whatever you want with the content on this page, just
+        This article originally appeared on Joshua's personal site and is reprinted with permission. Feel free to do whatever you want with the content on this page, just
         please attribute it with a link back here :).
       </License>
-
-      <CounterWrapper>
-        <HitCounter />
-      </CounterWrapper>
     </Wrapper>
   );
 };
@@ -30,9 +23,9 @@ const Wrapper = styled.footer`
   color: ${COLORS.white};
 `;
 
-const CounterWrapper = styled.div`
-  padding-bottom: 40px;
-`;
+// const CounterWrapper = styled.div`
+//   padding-bottom: 40px;
+// `;
 
 const Copyright = styled.div`
   max-width: 450px;
@@ -43,8 +36,9 @@ const Copyright = styled.div`
 `;
 
 const License = styled(Copyright)`
-  padding-top: 0;
+  padding-top: 40px;
   font-size: 13px;
+  text-align: left;
 `;
 
 export default Footer;

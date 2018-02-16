@@ -28,8 +28,8 @@ const App = () => {
     <Router>
       <Fragment>
         <Switch>
-          <Route path="/waveforms-intro" component={IntroRoute} />
-          <Redirect from="/" to="/waveforms-intro" />
+          <Route path="/" component={IntroRoute} />
+          <Redirect from="/" to="/" />
         </Switch>
         <Footer />
       </Fragment>
