@@ -10,8 +10,9 @@ const Footer = () => {
   return (
     <Wrapper>
       <License>
-        This article originally appeared on Joshua's personal site and is reprinted with permission. Feel free to do whatever you want with the content on this page, just
-        please attribute it with a link back here :).
+        This article originally appeared on Josh's personal site and is
+        reprinted with permission. Feel free to do whatever you want with the
+        content on this page, just please attribute it with a link back here :).
       </License>
     </Wrapper>
   );

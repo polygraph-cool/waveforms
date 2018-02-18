@@ -7,10 +7,16 @@ import { COLORS } from '../../constants';
 
 type Props = {
   external?: boolean,
+  font?: 'Publico Text Web' | 'Atlas Grotesk Web',
   target?: '_blank' | '_parent' | '_self' | '_top',
 };
 
-const Link = ({ external, target, ...delegated }: Props) => {
+const Link = ({
+  external,
+  target,
+  font = 'Publico Text Web',
+  ...delegated
+}: Props) => {
   const LinkComponent = external ? ExternalLink : InternalLink;
 
   const additionalProps = {};
@@ -19,7 +25,7 @@ const Link = ({ external, target, ...delegated }: Props) => {
     additionalProps.rel = 'noopener noreferrer';
   }
 
-  return <LinkComponent {...additionalProps} {...delegated} />;
+  return <LinkComponent font={font} {...additionalProps} {...delegated} />;
 };
 
 const InternalLink = styled(RRLink)`
@@ -27,11 +33,12 @@ const InternalLink = styled(RRLink)`
   display: inline-block;
   color: ${COLORS.primary[500]};
   text-decoration: none;
+  font-family: ${props => props.font};
 
   &:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: ${props => (props.font === 'Publico Text Web' ? '0px' : '-4px')};
     left: 0;
     right: 0;
     height: 2px;

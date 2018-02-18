@@ -48,6 +48,7 @@ const SidebarElem = styled.div`
   a {
     font-size: 20px;
     color: ${COLORS.white};
+    font-family: 'Atlas Grotesk Web';
   }
 
   a:after {
@@ -68,6 +69,7 @@ const Title = styled.div`
   font-weight: 500;
   text-transform: uppercase;
   transform: translateY(-125%);
+  font-family: 'Atlas Grotesk Web';
 
   @media (orientation: portrait) {
     left: ${PORTRAIT_PADDING};

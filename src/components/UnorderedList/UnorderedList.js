@@ -12,7 +12,7 @@ export default styled.ul`
   line-height: 1.5;
   font-weight: 300;
   color: ${COLORS.gray[900]};
-  -webkit-font-smoothing: 'antialiased';
+  -webkit-font-smoothing: antialiased;
   list-style-type: square;
 
   & > li {

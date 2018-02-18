@@ -76,7 +76,7 @@ const Header = styled.div`
 `;
 
 const Label = styled.span`
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: 400;
   color: ${COLORS.gray[700]};

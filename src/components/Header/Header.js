@@ -4,59 +4,61 @@ import styled from 'styled-components';
 
 import { COLORS, BREAKPOINTS } from '../../constants';
 
+import Link from '../Link';
+
 const Header = () => {
   return (
     <HeaderElem>
       <TitleIntro>Let's Learn About</TitleIntro>
       <Title>Waveforms</Title>
-      <Byline><a href='https://twitter.com/JoshWComeau' target='_blank'>By Josh Comeau</a></Byline>
+
+      <Byline>
+        By{' '}
+        <strong>
+          <Link
+            font="Atlas Grotesk Web"
+            external
+            to="https://twitter.com/JoshWComeau"
+            target="_blank"
+          >
+            Josh Comeau
+          </Link>
+        </strong>
+      </Byline>
     </HeaderElem>
   );
 };
 
 const HeaderElem = styled.header`
   position: relative;
-  height: 164px;
   margin-top: 196px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 
   @media ${BREAKPOINTS.lgMin} {
     margin-top: 222px;
   }
-`;
 
+  @media (orientation: portrait) {
+    margin-top: 146px;
+  }
+`;
 
 const TitleIntro = styled.h3`
   font-weight: 200;
-  color: ${COLORS.gray[700]};
-  letter-spacing: 0px;
+  color: ${COLORS.gray[500]};
   line-height: 1;
+  letter-spacing: 3px;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-size: 20px;
 
   @media (orientation: portrait) {
-    font-size: 8.5vw;
-  }
-
-  @media (orientation: landscape) {
     font-size: 3.5vw;
-    /*
-      On desktop, the alignment looks off, since the title starts with a W.
-      By outdenting it a bit, it gives the illusion of alignment.
-      (on mobile/portrait, though, there's an edge-of-screen there, so it looks
-      funny with this outdent.)
-    */
-    margin-left: -9px;
-  }
-
-  @media ${BREAKPOINTS.lgMin} {
-    /*
-      At a certain point, the 'vw' solution looks a little obnoxiously large.
-      There is a clever way to do this using 'calc', but the simple way is
-      clearer.
-    */
-    font-size: 50px;
   }
 `;
 
@@ -66,6 +68,8 @@ const Title = styled.h1`
   letter-spacing: -3px;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Canela Web', 'Times New Roman', serif;
+  margin-bottom: 60px;
 
   @media (orientation: portrait) {
     font-size: 16vw;
@@ -88,7 +92,11 @@ const Title = styled.h1`
 `;
 
 const Byline = styled.p`
-  margin-top: 1rem;
+  font-family: 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
+
+  @media (orientation: portrait) {
+    font-size: 14px;
+  }
 `;
 
 export default Header;

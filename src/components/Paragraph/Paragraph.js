@@ -8,7 +8,8 @@ export default styled.p`
   font-weight: 300;
   line-height: 1.5;
   color: ${COLORS.gray[900]};
-  -webkit-font-smoothing: 'antialiased';
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Publico Text Web';
 
   @media ${BREAKPOINTS.sm} {
     font-size: 21px;
