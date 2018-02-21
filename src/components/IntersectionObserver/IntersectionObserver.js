@@ -1,6 +1,8 @@
 // @flow
 import React, { PureComponent } from 'react';
 
+import '../../polyfills/intersection-observer';
+
 type Props = {
   id: string,
   root?: HTMLElement,
@@ -18,15 +20,6 @@ class IntersectionObserver extends PureComponent<Props> {
   hasStartedObservation: boolean = false;
 
   componentDidMount() {
-    if (typeof window.IntersectionObserver === 'undefined') {
-      import('../../polyfills/intersection-observer.js')
-        .then(() => this.beginObservation())
-        .catch(err =>
-          console.error('Could not load IntersectionObserver polyfill')
-        );
-      return;
-    }
-
     this.beginObservation();
   }
 
