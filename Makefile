@@ -1,3 +1,4 @@
+# you must remove the /static to static in index.html for js reference
 live:
 	rm build/favicon.*
 	cp og-img.jpg build/static
